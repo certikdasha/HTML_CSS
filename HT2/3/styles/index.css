@@ -1,0 +1,52 @@
+.holder{
+    display: flex;
+    border: 2px solid black;
+    width: 300px;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden ;
+}
+
+.holder > div{
+    min-width: 100px;
+    height: 50px; 
+    
+}
+
+
+.i1{
+    background: red;
+    order: 1;
+    /* flex-grow: 3; */
+    flex-wrap: wrap;
+}
+.i2{
+    background: royalblue;
+    order: 4;
+    /* flex-grow: 1; */
+    flex-wrap: nowrap;
+}
+.i3{
+    background: purple;
+    order: 3;
+    /* flex-grow: 1; */
+    flex-wrap: nowrap;
+}
+.i4{
+    background: green;
+    order: 5;
+    /* flex-grow: 1; */
+    flex-wrap: nowrap;
+}
+.i5{
+    background: orange;
+    order: 2;
+    /* flex-grow: 1,5; */
+    flex-wrap: wrap;
+} 
+
+
+
+
