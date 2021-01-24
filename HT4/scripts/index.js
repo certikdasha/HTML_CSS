@@ -19,8 +19,8 @@ console.log(allLeter);
 
 
 //2
-//!!!!!!вывести правильно дату!!!!!!!!!!!!!
-var today = new Date().toLocaleString();//this -> "20.02.2019, 13:21:51"
+//
+var today = new Date().toLocaleString();
 
 function dataType(index){
     if (isNaN(index)){
@@ -141,8 +141,7 @@ function getCurrentPostComments ( postId ) {
     var res = []
 
     for (let key in comments){
-        if (comments[key].postId == postId) {//найти в коментах пост
-            // console.log(comments[key].text)
+        if (comments[key].postId == postId) {
             let authorId = comments[key].author
             for (let n in users){
                 if (n == authorId) {
@@ -153,7 +152,6 @@ function getCurrentPostComments ( postId ) {
                 }
             }
         }
-        
     }
     return res
 }
