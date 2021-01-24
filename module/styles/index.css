@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+}
+
+#user-list{
+    width: 500px;
+}
+.user-card{
+    border: 1px solid rebeccapurple;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+.user-card .user-info{
+    margin-left: 15px;
+}
+
+.user-card img {
+    min-height: 64px;
+    min-width: 64px;
+}
