@@ -2,31 +2,26 @@
 //
 let letters = [];
 let str = 'Backend As A Service';
-let line = str.split(' ');
-let allLeter = '';
+let word = str.split(' ');
 
-line.forEach(function(item, index){
+word.forEach(function(item, index){
     letters[index] = item[0]
 })
 
 console.log(letters);
 
-letters.forEach(function(item){
-    allLeter += item; 
-})
-
-console.log(allLeter);
+console.log(letters.join(''));
 
 
 //2
 //
-var today = new Date().toLocaleString();
+// var today = new Date().toLocaleString();
 
 function dataType(index){
     if (isNaN(index)){
         console.log('Неверный тип данных');
     } else {
-        console.log(today);
+        console.log(new Date().toLocaleString());
     }
 }
 
@@ -36,7 +31,8 @@ dataType(98);
 //3
 //
 function consolePrint(){
-    console.log(consolePrint);
+    // console.log(consolePrint);
+    console.log(arguments.callee);
     console.log(arguments);
 }
 consolePrint(10, false, "google");
@@ -141,13 +137,14 @@ function getCurrentPostComments ( postId ) {
     var res = []
 
     for (let key in comments){
-        if (comments[key].postId == postId) {
-            let authorId = comments[key].author
-            for (let n in users){
-                if (n == authorId) {
+        let comment = comments[key]
+        if (comment.postId == postId) {
+            let authorId = comment.author
+            for (let id in users){
+                if (id == authorId) {
                     res.push({
-                        name: users[n].name,
-                        text: comments[key].text,
+                        name: users[id].name,
+                        text: comment.text,
                     })
                 }
             }
