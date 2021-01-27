@@ -2,7 +2,7 @@ blockquote{
     color: green;
 }
 
-a[href^="https://"]{
+.holder > a[href^="https://"]{
     color: red;
 }
 .list > li:last-child{

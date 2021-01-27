@@ -46,10 +46,31 @@ const start = async () => {
     await getUsers();
 
     showUsers(users);
+    addNewUserButtonHandler();
 
     // const element = document.getElementById('test-id');
     // const spanElements = document.getElementsByClassName('text');
     // console.log(element, spanElements);
 }
+
+//замыкание
+
+    // function getNumber(){
+    //     let number = 0;
+
+    //     return () => {
+    //         return ++number;
+    //     }
+    // }
+    // const newFunc = getNumber();
+
+    // let newNumb = newFunc();
+    
+    // console.log(newNumb);//1
+
+    // let newNumb = newFunc();
+
+    // console.log(newNumb);//2
+
 
 start();

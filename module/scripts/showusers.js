@@ -1,5 +1,7 @@
 const AVATAR_URL = "https://eu.ui-avatars.com/api/?name=";
 
+    
+
 const createUserCard = user =>{
     const {
         name,
@@ -40,6 +42,12 @@ const showUsers = users => {
     // newTag.textContent = 'Im created';
 
     // document.body.appendChild(newTag);
+
+    // const btn = document.createElement('button');
+    // btn.className = 'butt';
+
+    // btn.appendChild(document.createTextNode("КНОПКА"));
+
 
     users.forEach(createUserCard) 
 }
