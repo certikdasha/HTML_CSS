@@ -12,11 +12,11 @@
 // )
 // console.log(2)
 
-const url = 'https://jsonplaceholder.typicode.com';
+const url = 'https://jsonplaceholder.typicode.com';//ссылка к серверу
 
-const usersURL = url + '/users';
+const usersURL = url + '/users'; //ссылка на юзеров
 
-const getUsersReq = fetch(usersURL);
+// const getUsersReq = fetch(usersURL);
 
 // getUsersReq.then(
 //     function(res){
@@ -27,12 +27,12 @@ const getUsersReq = fetch(usersURL);
 //         )
 //     }
 // )
-let users = [];
+let users = [];//список юзеров
 
 const getUsers = async () => {
-    const getUsersReq = await fetch(usersURL);
-    const data = await getUsersReq.json();
-    users = data;
+    const getUsersReq = await fetch(usersURL);  // http запрос с ожиданием получим ответ
+    const data = await getUsersReq.json();  // преобразование данных
+    users = data;  // заносим юзеров в массив
     // getUsersReq
     // .then((res) => {
     //         res.json()
@@ -41,18 +41,20 @@ const getUsers = async () => {
     //         })
     // })
 }
-const userListElem = document.getElementById('user-list')
-const start = async () => {
-    await getUsers();
 
-    showUsers(users);
-    addNewUserButtonHandler();
+const userListElem = document.getElementById('user-list');  // генерируем список элементов юзеров с сервера
+const start = async () => {
+    await getUsers();  // ожидание получения функции
+
+    showUsers(users);  // вызов ф-ции показа юзеров с передачей пользователей
+    addNewUserButtonHandler();  // добавление кнопки
 
     // const element = document.getElementById('test-id');
     // const spanElements = document.getElementsByClassName('text');
     // console.log(element, spanElements);
 }
 
+start();
 //замыкание
 
     // function getNumber(){
@@ -66,11 +68,10 @@ const start = async () => {
 
     // let newNumb = newFunc();
     
-    // console.log(newNumb);//1
+    // console.log(newNumb);  // 1
 
     // let newNumb = newFunc();
 
-    // console.log(newNumb);//2
+    // console.log(newNumb);  // 2
 
 
-start();

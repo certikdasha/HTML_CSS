@@ -39,11 +39,22 @@ body {
     width: 500px;
 }
 .user-card{
-    border: 1px solid rebeccapurple;
+    border: 1px solid black;
     margin: 15px;
     display: flex;
     align-items: center;
 
+}
+
+.user-card-new{
+    border: 2px solid #0fb110;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.user-card-new .user-info{
+    margin-left: 15px;
 }
 
 .user-card .user-info{
@@ -82,4 +93,10 @@ button.button-success {
 
 button.button-danger{
     background: red;
+}
+
+.warning-form{
+    /*border: 1px solid #910819;*/
+    color: #c71223;
+    font-family:Arial;
 }
